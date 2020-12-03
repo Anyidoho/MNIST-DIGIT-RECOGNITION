@@ -5,7 +5,7 @@ Paul Steller [1], Grace Ashley[2], Prosper Anyidoho[2], and Ibrahim Balogun[2]
 (pstellar@udel.edu) 
 [2]	Faculty of Engineering, Department of Civil and Environmental Engineering, University of Delaware (gashely@udel.edu, iobalo@udel.edu, panyidoh@udel.edu ) 
  
-Abstract 
+**Abstract**\
 Handwritten digit recognition is one of the most active research areas in machine learning due to its vast applications in different fields. Its popularity could be ascribed to the numerous alphabets and written digits that are peculiar to each country. In this paper, we optimized the accuracy of machine learning classifiers for digit recognition. Our models were trained on the popular MNIST dataset. The dataset contains 60,000 training and 10000 testing images. Results from the algorithms (SVC, KNN, Random forest and CNN) we adopted, suggested that CNN outperforms the other three models with a test error of only 0.55%. Finally, we deployed our CNN TensorFlow model in a user-friendly android environment. 
  
  
@@ -16,7 +16,7 @@ In this paper, we also used four (4) classification algorithms to optimize handw
  
  
  
-2.0 State of the Art 
+2.0 State of the Art
 The MNIST database provides ranking for the different models trained on the MNIST data set, based on test errors reported for each model. The website also reports whether each model involved data preprocessing or augmentation. Early machine learning approaches adopted by LeCun et al. [3] included linear classifiers (with error rate ranges from 7.6 to 12%), K-nearest neighbors approaches (KNN, ranging from 1.1 to 5%), non-linear classifiers (about 3.5%), support vector machines (SVM, from 0.8 to 1.4%), neural networks (NN, from 1.6 to 4.7%) and convolutional neural networks (CNN, from 
 0.7 to 1.7%)[2]. It is evident that models with data augmentation reported lower test error rates.  
 Though, models based on convolutional neural networks outperform other classifiers, some classical machine learning techniques are still able to provide competitive error rates.  For example, Belongie et al. [4] achieved 0.63% and Keysets et al. [5] recorded 0.54% and 0.52% using K-NN, Kégl and BusaFekete [6] obtained 0.87% using boosted stumps on Haar features, LeCun et al. [3] achieved 0.8% and Decoste and Schölkopf [7] attained results from 0.56 to 0.68% using SVM. 
