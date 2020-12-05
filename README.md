@@ -26,8 +26,8 @@ In the next section, we briefly describe each algorithm architecture adopted in 
 
 
 
-3.0 Proposed Methods 
-3.1 Support Vector Machine
+**3.0** **Proposed** **Methods** \
+**3.1** **Support** **Vector** **Machine**\
 The figure above, the hyperplane clearly shows how the digits are classified correctly (Green) or misclassified (Red). The figure to the left could be related to the scenario where the image is obviously right. for instance, 𝜉1, 𝜉2, and 𝜉3. However, the digits are misclassified due to orientation, positions, or sizes. An illustration to that could be seen on the right side of figure 2. The right panel shows the nonseparable case in which the points labeled 𝜉1are on the wrong side of the margin. The SVM can be expressed mathematically as follows: 
 𝑓(𝑥, 𝑤) = ∑𝑛𝑗=1 𝑤𝑗 ∗ 𝑔𝑗(𝑥) + 𝑏                                          (1) 
 Where 𝑔𝑗(𝑥) is a mapping function, 𝑤𝑗 is the weight coefficient, 𝑏 is the threshold. However, regression optimization constraints can be expressed as: 
@@ -61,7 +61,11 @@ It is often claimed that the forest it builds, is an ensemble of decision trees,
 **3.4** **Convolution** **Neural** **Networks** \
 A Convolutional Neural Network (ConvNet/CNN) is a deep learning algorithm which can take in an input image and assign weights to various sections of the image for the purpose of classification.  The CNN model can learn these weights with enough training time and the right optimizers. The architecture of a ConvNet is like that of the connectivity pattern of Neurons in the Human Brain and was inspired by the organization of the Visual Cortex. Figure 8 describes a simple CNN architecture for MNIST digit recognition. The figure shows an input which is passed through convolutional layers and later flattened for a fully connected feed forward neural layer which outputs predictions in the final layer. 
  
-Figure 8: Simple CNN architecture for digit recognition 
+Figure 8: Simple CNN architecture for digit recognition
+
+
+
+
 **4.0** **Results** **and** **Analysis** \
 In this research, we used the popular MNIST dataset which contained 60,000 training example and labels. The datasets contain 10,000 test examples and labels. Each row consists of 785 values: the first value is the label (a number from 0 to 9) and the remaining 784 values are the pixel values (a number from 0 to 255). The machine learning algorithms are further trained on the datasets to determine which algorithm gives the best classification. 
 We consider the effect of the individual methods on the MNIST dataset holistically. The first section discusses the SVC, the second section discuss KNN, the third section discuss the Decision tree and the last section Convolution neural networks. 
