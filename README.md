@@ -8,15 +8,14 @@ Paul Steller [1], Grace Ashley[2], Prosper Anyidoho[2], and Ibrahim Balogun[2]
 **Abstract**\
 Handwritten digit recognition is one of the most active research areas in machine learning due to its vast applications in different fields. Its popularity could be ascribed to the numerous alphabets and written digits that are peculiar to each country. In this paper, we optimized the accuracy of machine learning classifiers for digit recognition. Our models were trained on the popular MNIST dataset. The dataset contains 60,000 training and 10000 testing images. Results from the algorithms (SVC, KNN, Random forest and CNN) we adopted, suggested that CNN outperforms the other three models with a test error of only 0.55%. Finally, we deployed our CNN TensorFlow model in a user-friendly android environment. 
  
- 
-1.0 Introduction 
+1.0 Introduction \
 Image analysis is classified as a sub-field of Artificial Intelligence (AI). This area has drawn numerous attention due to the vast applications of images in today’s world. Some of the applicable areas are Railway Engineering (Rail Corrugation), Highway Engineering (Intrusion Detection), and Biomedical Engineering (Brain Image processing, Breast cancer detection). Aside the active areas mentioned, one other area that has gained popularity in the last two decades is the Handwritten digits recognition. The popularity of this can be ascribed to the diversity of human spoken and written language with varying alphabets in languages such as Chinese, Arabic, French, English and many more. This sounds interesting in the sense that; machine learning models could be trained to recognize the images even when the style of writing differs for individuals. The application of digit recognition is not limited to handwritten letters but could also be applicable in office automation, check verification, postal address reading and printed postal codes, and data entry applications[1].  
 Since the release of the MNIST data set in 1988, several works have been done with different machine learning models. The first paper was published by LeCun et al. 1998, where a pairwise linear classifier approach was adopted with a test error of 7.9%[2]. Since then, it has been a competition among the machine learning community. The MNIST database keeps a record of top performing models trained on the MNIST data. 
 In this paper, we also used four (4) classification algorithms to optimize handwritten digits recognition and finally created an android app to identify user-drawn digits. The methods tested are Support Vector Classifier, K-Nearest Neighbors, Decision Trees and Convolution Neural Networks. The rest of the paper is structured as follows: Section 2 explains the reviews of some related articles. Section 3 tells about the methods used. Section 3 gives the experimental results. The last section is section 5 and it explains the conclusion as well as the areas to improve upon. 
  
  
  
-2.0 State of the Art
+2.0 State of the Art \
 The MNIST database provides ranking for the different models trained on the MNIST data set, based on test errors reported for each model. The website also reports whether each model involved data preprocessing or augmentation. Early machine learning approaches adopted by LeCun et al. [3] included linear classifiers (with error rate ranges from 7.6 to 12%), K-nearest neighbors approaches (KNN, ranging from 1.1 to 5%), non-linear classifiers (about 3.5%), support vector machines (SVM, from 0.8 to 1.4%), neural networks (NN, from 1.6 to 4.7%) and convolutional neural networks (CNN, from 
 0.7 to 1.7%)[2]. It is evident that models with data augmentation reported lower test error rates.  
 Though, models based on convolutional neural networks outperform other classifiers, some classical machine learning techniques are still able to provide competitive error rates.  For example, Belongie et al. [4] achieved 0.63% and Keysets et al. [5] recorded 0.54% and 0.52% using K-NN, Kégl and BusaFekete [6] obtained 0.87% using boosted stumps on Haar features, LeCun et al. [3] achieved 0.8% and Decoste and Schölkopf [7] attained results from 0.56 to 0.68% using SVM. 
@@ -25,18 +24,9 @@ In the next section, we briefly describe each algorithm architecture adopted in 
  
  
  
+
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-3.0 Proposed Methods 3.1 Support Vector Machine 
+3.0 Proposed Methods 3.1 Support Vector Machine \
 The Support Vector Machine is a specific type of supervised Machine learning that intends to classify data points by maximizing the margin among classes in a high-dimensional space. In a general term, the classification is done by finding the hyper-plane that differentiate the classes. 
   
 Figure1: An illustration of support vector classifier  
@@ -53,7 +43,7 @@ Where c is the penalty parameter 𝜀𝑖 and 𝜀𝑗∗ are the slack variable
  
  
  
-3.2 K-Nearest Neighbors 
+3.2 K-Nearest Neighbors \
 The K- nearest neighbors (KNN) algorithm is a simple, easy-to-implement supervised machine learning algorithm that can be used to solve both classification and regression problems [5]. The KNN assumes that similar things exist in proximity.  
  
                                 
@@ -64,22 +54,22 @@ For K training observations that close to 𝑥0, represent by 𝑁𝐾. It then 
 𝑥𝑖∈𝑁𝐾(𝑋)
 Where 𝑁𝐾(𝑋) denotes the k-nearest neighbors of x to some metric, such as Euclidean distance, Minkowski or Manhattan. 
  
-3.3 Random Forest Classifier 
+3.3 Random Forest Classifier \
 The random forest is a supervised machine learning algorithm that produces accurate results when trained with datasets without any parameter tuning. Due to its simplicity and diversity, it can be used for both classification and regression problems. 
  
   
 Figure 7. An illustration of a typical random forest assemblage 
 It is often claimed that the forest it builds, is an ensemble of decision trees, usually trained with the bagging method.  Scholarly articles have been published as to the verification in the similarity and dissimilarity between random forest and decision tree. In this research, the estimator is varied to optimize its accuracy over the output predictions. 
  
-3.4 Convolution Neural Networks 
+3.4 Convolution Neural Networks \
 A Convolutional Neural Network (ConvNet/CNN) is a deep learning algorithm which can take in an input image and assign weights to various sections of the image for the purpose of classification.  The CNN model can learn these weights with enough training time and the right optimizers. The architecture of a ConvNet is like that of the connectivity pattern of Neurons in the Human Brain and was inspired by the organization of the Visual Cortex. Figure 8 describes a simple CNN architecture for MNIST digit recognition. The figure shows an input which is passed through convolutional layers and later flattened for a fully connected feed forward neural layer which outputs predictions in the final layer. 
  
 Figure 8: Simple CNN architecture for digit recognition 
-4.0 Results and Analysis 
+4.0 Results and Analysis \
 In this research, we used the popular MNIST dataset which contained 60,000 training example and labels. The datasets contain 10,000 test examples and labels. Each row consists of 785 values: the first value is the label (a number from 0 to 9) and the remaining 784 values are the pixel values (a number from 0 to 255). The machine learning algorithms are further trained on the datasets to determine which algorithm gives the best classification. 
 We consider the effect of the individual methods on the MNIST dataset holistically. The first section discusses the SVC, the second section discuss KNN, the third section discuss the Decision tree and the last section Convolution neural networks. 
  
-4.1 Support Vector Classifier Results 
+4.1 Support Vector Classifier Results \
 Support Vector Machines work by creating a (affine) hyperplane (an n - 1 subspace of an n dimensional space) to separate the data. It is worth noting that the data may not actually be separable, and so a separating hyperplane may not exist. Further, even if such a hyperplane does exist, it may not be unique. When the data is not perfectly separable, we allow for some of the points to be on the wrong side of the hyperplane, but we introduce a constant to control the error. We may also change the kernel function to better separate the data. Further, when the there are more than two classes in the data, there are a couple different approaches we may take. The “one versus all” approach fits the model to separate each class against every other class (as a whole). This differs from the “one versus one” approach, which fits the model to pairwise separate each class against every other individual class. Because the one versus one approach needs to fit the model many more times, it is more computationally expensive than the one versus all approach. 
 Now, looking at the MNIST data, the first thing we did was to test three different classes against each other. 
  
@@ -216,7 +206,7 @@ Figure 15: Comically written digits
  
  
  
-4.2 K-Nearest Neighbors  
+4.2 K-Nearest Neighbors  \
 We assessed how well the K-Nearest Neighbor (KNN) Classifier could perform predictions on the MNIST dataset. We selected and tested nearest neighbors 2, 5 and 7 to perform this analysis.   Table 6: Results for KNN with k=,2,5,7 
 	KNN on Original Data 	
 Nearest Neighbor 	Error % 	Model Ranking 	Total Time Taken 
@@ -277,7 +267,7 @@ ki
 9 	0.96 	0.97 	0.96 	0.96 	0.96 	0.97 	1009 	1009 
  
  
-4.3 Random Forest Classifier 
+4.3 Random Forest Classifier \
 Random Forest is a very easy model to build and can produce quite impressive results. Of course, the data used in this model is not as complicated and does not require as much pre-processing as a bigger dataset would. The most important parameter of the Random Forest Classifier is the number of estimators. We run the model for 20, 50, 75 and 100 estimators 
 The accuracy obtained by varying the number of estimators does not have much effect on larger trees e.g 50,75 and 100. However, the least estimator gave the accuracy of 96% and as such ranked 4th. In general, the digits are well classified using the Random Forest except for the digit “9” which was weakly classify across the estimators. Table 9 below shows different evaluation metrics and their performance on each digit for the optimal number of estimators (100) 
 Table 9: Evaluation metrics for optimal number of estimators 
@@ -303,7 +293,7 @@ N-Estimator 	Label 	Precision 	Recall 	F1 score
  
  
     
-4.4 Convolution Neural Networks (CNNs) 
+4.4 Convolution Neural Networks (CNNs) \
 Similarly, we trained a multi-layer CNN to classify our digits. The model architecture adopted is similar to traditional CNN layers. The only introduction here is the use of a squeeze and excitation block. This layer ensures channel wise and spatial patterns across image channels are correctly captured. The optimizer adopted is Adam which ensures weights can reach optimal points after a considerable number of epochs. The detailed architecture of the CNN used is presented in our notebooks. Before applying the model to the test data, we carried out validation to see how well the model performs. As shown in the figure below, the training and validation loss decreases with increase in number of epochs. It is also evident that, the validation loss at each epoch is less than that of the training loss which is a good sign our model is not overfitting. 
  
  
@@ -330,12 +320,8 @@ Applying the model to the test set gave an error of 0.55% which still happens to
  
 Figure 17: Android app demo 
  
- 
- 
- 
- 
-5.0 Discussion and Conclusion 
- 
+
+5.0 Discussion and Conclusion
 In this paper, we optimized four classification algorithms on the MNIST data set for digit recognition. The results suggested, the performance of models increases when data augmentation is used during data processing. Data augmentation provides new training instances which helps to solve the problem of high variance. That is, we assist models to have high generalization which improves performance when deployed. The CNN model turned out to be the best model among the 4 models trained. This makes sense since, CNN model architecture is perfectly designed for images. We also went ahead and deployed our final CNN model in android environment, where a user draws a digit in a canvas for the app to classify.  
 In the future, we might consider integrating a camera component in our app, where a user could classify digits in real time. We can also extend this application to other types of texts and alphabets. 
  
