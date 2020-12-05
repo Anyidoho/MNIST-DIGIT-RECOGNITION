@@ -321,7 +321,7 @@ Applying the model to the test set gave an error of 0.55% which still happens to
 Figure 17: Android app demo 
  
 
-5.0 Discussion and Conclusion
+5.0 Discussion and Conclusion\
 In this paper, we optimized four classification algorithms on the MNIST data set for digit recognition. The results suggested, the performance of models increases when data augmentation is used during data processing. Data augmentation provides new training instances which helps to solve the problem of high variance. That is, we assist models to have high generalization which improves performance when deployed. The CNN model turned out to be the best model among the 4 models trained. This makes sense since, CNN model architecture is perfectly designed for images. We also went ahead and deployed our final CNN model in android environment, where a user draws a digit in a canvas for the app to classify.  
 In the future, we might consider integrating a camera component in our app, where a user could classify digits in real time. We can also extend this application to other types of texts and alphabets. 
  
@@ -346,7 +346,7 @@ In the future, we might consider integrating a camera component in our app, wher
  
  
  
-References 
+References \
 [1]	A. Baldominos, Y. Saez, and P. Isasi, “A survey of handwritten character recognition with MNIST and EMNIST,” Appl. Sci., vol. 9, no. 15, 2019. 
 [2]	C. J. C. LeCun, Y.; Cortes, C.; Burges, “The MNIST Database of Handwritten Digits. 2012,” 2012. [Online]. Available: http://yann.lecun.com/exdb/mnist/. [Accessed: 23-May-2020]. 
 [3]	P. LeCun, Y.; Bottou, L.; Bengio, Y.; Haffner, “Gradient-based learning applied to document recognition,” IEEE, vol. 86, 1998. 
